@@ -7,3 +7,7 @@ Process of generate kle on your demand:
 
 OR:
 1. create info_json_path variable manually, which points to the info.json which you want to convert. And invocate generate_kle_layout in REPL manually.
+
+
+This modification removes pyclip (generate_kle_layout.py)
+This modification removes all [ ] from within matrix entries for a more via / vial friendly output (generate_kle_layout_mod.py
