@@ -56,8 +56,12 @@ def generate_kle_layout(info_json_path):
                 else:
                     template["x"] = item_layout_dict['x']
                 line.append(template)
+
+                # Remove square brackets from the matrix string, if present
                 try:
-                    line.append(f'''{item_layout_dict['matrix']}''')
+                    matrix_string = str(item_layout_dict['matrix'])
+                    matrix_string = matrix_string.replace('[', '').replace(']', '')  # Remove brackets
+                    line.append(matrix_string)  # Append without additional quotes
                 except KeyError:
                     pass
             else:
@@ -67,8 +71,12 @@ def generate_kle_layout(info_json_path):
                 else:
                     template["x"] = item_layout_dict['x']
                 line.append(template)
+
+                # Remove square brackets from the matrix string, if present
                 try:
-                    line.append(f'''{item_layout_dict['matrix']}''')
+                    matrix_string = str(item_layout_dict['matrix'])
+                    matrix_string = matrix_string.replace('[', '').replace(']', '')  # Remove brackets
+                    line.append(matrix_string)  # Append without additional quotes
                 except KeyError:
                     pass
         output += str(line).replace("'x'", 'x').replace("'y'", 'y').replace("\'", '\"') + ',\n'
