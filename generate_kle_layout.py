@@ -74,8 +74,8 @@ def generate_kle_layout(info_json_path):
         output += str(line).replace("'x'", 'x').replace("'y'", 'y').replace("\'", '\"') + ',\n'
     return output
 
-keyboards_folder = '/home/alec/Documents/info_json'
-kle_folder = '/home/alec/Documents/info_json/output'
+keyboards_folder = ''
+kle_folder = ''
 
 info_json_folders = find_info_json_folders(keyboards_folder)
 
